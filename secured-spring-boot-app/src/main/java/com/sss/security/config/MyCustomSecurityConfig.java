@@ -38,7 +38,8 @@ public class MyCustomSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-      http.httpBasic();//The type of authentication used is basic-auth
+//      http.httpBasic();//The type of authentication used is basic-auth
+		 http.formLogin();//The type of authentication used is form-based
       http.authorizeRequests().anyRequest().authenticated();//Any request intercepted through this filter should be authorized
 	}
 	
